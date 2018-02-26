@@ -1,16 +1,16 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, View, Text, Image } from 'react-native';
-import Homepage from './Homepage.js';
-
+import { StyleSheet, View, Text, Image } from 'react-native';
+import Stack from './config/router.js';
+import Launchscreen from './src/Launchscreen.js';
 
 
 export default class App extends React.Component {
   render() {
 
     return (
-      <View>
-      <Homepage/>
-      </View>
+      <Stack/>
+
+            
     );
   }
 }
