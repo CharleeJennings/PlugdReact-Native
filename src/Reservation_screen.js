@@ -9,7 +9,6 @@ export default class Reservation extends React.Component
 {
 
 	static navigationOptions = {
-		header : null
 	};
 
 
@@ -24,7 +23,7 @@ export default class Reservation extends React.Component
 		return( 
 
 			<View>
-			<Header centerComponent={{text: 'Reservations'}}/>
+			<Header centerComponent={{text: 'Businesses'}} leftComponent= {{ icon: 'chevron-left', onPress: () => this.props.navigation.goBack()}} />
 			<Text> Hello </Text>
 			</View>);
 	}

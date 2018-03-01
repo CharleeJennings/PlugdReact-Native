@@ -1,38 +1,33 @@
-import Homepage from '../src/Homepage.js';
-import {StackNavigator} from 'react-navigation';
-import Reservation from '../src/Reservation_screen.js';
+import mainStack from '../src/Homepage.js';
+import {StackNavigator , DrawerNavigator} from 'react-navigation';
 import React from 'react';
-import Launchscreen from '../src/Launchscreen.js'
+import Menu from '../src/Menu.js';
+import { Text } from 'react-native';
 
 
-const RootStack =  StackNavigator({
 
-	Splash : 
-	{
-		screen : Launchscreen
+const SideBar = DrawerNavigator(
+{
+	Account: {
+		screen : mainStack
 	},
-
-	Home : {
-
-		screen: Homepage
-	},
-	Reserve: {
-
-		screen: Reservation
-	},
+	
 
 },
 	{
-    	initialRouteName: 'Splash',
-  }
+		initialRouteName: 'Account',
+		drawerPosition: 'left',
+		contentComponent: props => <Menu/>
+	}
 
-);
+)
+
 
  export default class Stack extends React.Component 
 {
 	render()
 	{
-		return <RootStack/>;
+		return <SideBar/>;
 
 	}
 }

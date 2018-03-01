@@ -1,6 +1,6 @@
 import React from 'react';
 import { Animated, StyleSheet, Text, View, Image } from 'react-native';
-import {StackNavigatior} from 'react-native';
+import {StackNavigatior, Icon} from 'react-native';
 
 
 
@@ -19,6 +19,7 @@ export default class LaunchScreen extends React.Component
 				toValue : 0,
 				duration: 5000,
 			}).start();
+
 			this.props.navigation.navigate('Home');
 
 		}

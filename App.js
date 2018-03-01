@@ -2,24 +2,20 @@ import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
 import Stack from './config/router.js';
 import Launchscreen from './src/Launchscreen.js';
+import mainStack from './src/Homepage.js';
+
 
 
 export default class App extends React.Component {
   render() {
 
     return (
-      <Stack/>
+
+      <View>
+         <Stack/>
+      </View>
 
             
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
